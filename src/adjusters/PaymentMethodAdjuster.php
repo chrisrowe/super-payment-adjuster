@@ -21,7 +21,7 @@ class PaymentMethodAdjuster extends Component implements AdjusterInterface
             $gatewayHandle = $order->getGateway()->handle;
 
             $paymentAdjusters = PaymentAdjuster::find()->status('enabled')
-                ->where(['gatewayHandle' => $gatewayHandle])->all();
+                ->where(['gatewayHandle' => $gatewayHandle, 'enabled' => true])->all();
 
             /** @var PaymentAdjuster $paymentAdjuster */
             foreach ($paymentAdjusters as $paymentAdjuster) {

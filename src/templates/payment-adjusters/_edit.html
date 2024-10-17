@@ -173,6 +173,12 @@
         required: true,
     }, amountTypeInput) }}
 
+    {{ forms.lightswitchField({
+        label: "Enabled"|t('super-payment-adjuster'),
+        id: 'enabled',
+        name: 'enabled',
+        on: element.enabled
+    }) }}
 
 {% endblock %}
 {% js "new Craft.HandleGenerator('#title', '#handle');" %}
