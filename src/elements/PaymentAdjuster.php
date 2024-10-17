@@ -21,6 +21,7 @@ class PaymentAdjuster extends Element
     public $amountType;
     public $baseAmount;
     public $percentAmount;
+    public $enabled; // Pf533
 
     public function __toString(): string
     {
@@ -119,6 +120,7 @@ class PaymentAdjuster extends Element
         $record->amountType = $this->amountType;
         $record->baseAmount = abs($baseAmount);
         $record->percentAmount = abs($percentAmount);
+        $record->enabled = $this->enabled; // Pef7c
         $record->save(false);
 
         $this->id = $record->id;
