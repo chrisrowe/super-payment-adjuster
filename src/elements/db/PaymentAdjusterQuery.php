@@ -31,7 +31,8 @@ class PaymentAdjusterQuery extends ElementQuery
             Table::PAYMENT_ADJUSTER . '.type',
             Table::PAYMENT_ADJUSTER . '.amountType',
             Table::PAYMENT_ADJUSTER . '.baseAmount',
-            Table::PAYMENT_ADJUSTER . '.percentAmount'
+            Table::PAYMENT_ADJUSTER . '.percentAmount',
+            Table::PAYMENT_ADJUSTER . '.enabled'
         ]);
 
         return parent::beforePrepare();
